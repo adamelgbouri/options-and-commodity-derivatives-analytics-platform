@@ -91,7 +91,7 @@ $$\text{NPV} = \sum_{i=1}^{N}e^{-rT_i}(F_i - K)\cdot\text{notional}, \qquad K^* 
 
 **Barrier option** (Down-and-Out call, daily Monte Carlo at 252 steps/year):
 
-$C_\text{KO} = e^{-rT}\,\mathbb{E}\!\left[\max(S_T-K,\,0)\cdot\mathbf{1}_{\left\{\min_{0\le t\le T}S_t > B\right\}}\right]$
+$$C_\text{KO} = e^{-rT}\,\mathbb{E}\!\left[\max(S_T-K,\,0)\cdot\mathbf{1}_{\left\{\min_{0\le t\le T}S_t > B\right\}}\right]$$
 
 See [`docs/Options_and_Commodity_Derivatives_Analytics_Platform.pdf`](docs/Options_and_Commodity_Derivatives_Analytics_Platform.pdf) for the full mathematical write-up.
 
