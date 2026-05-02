@@ -3,6 +3,8 @@
 > Six industrial pricing engines. 65+ commodities. Live futures data.  
 > From vanilla Black-76 to barrier Monte Carlo — all in a single Python file.
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://aeg-ocdap.streamlit.app/)
+
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-red?style=flat-square)
 ![Numpy](https://img.shields.io/badge/NumPy-Monte%20Carlo-orange?style=flat-square)
@@ -23,7 +25,7 @@ Every pricer is connected to the same forward curve, ensuring consistency across
 
 ## Live Demo
 
-**[aeg-cfcap.streamlit.app](https://aeg-cfcap.streamlit.app/)**
+**[aeg-ocdap.streamlit.app](https://aeg-ocdap.streamlit.app/)**
 ---
 
 ## Pricing Engines
@@ -109,18 +111,13 @@ See [`docs/Options_and_Commodity_Derivatives_Analytics_Platform.pdf`](docs/Optio
 | `streamlit` | Interactive browser dashboard |
 | `plotly` | Zoomable charts, 3D volatility surface |
 
-```bash
-pip install numpy pandas scipy yfinance streamlit plotly
-pip install git+https://github.com/StreamAlpha/tvdatafeed.git  # optional
-```
-
 ---
 
 ## Relationship with CFCAP
 
 OCDAP and CFCAP are complementary platforms designed to be used together:
 
-| | [CFCAP]([https://aeg-cfcap.streamlit.app/](https://github.com/adamelgbouri/commodity-forward-curve-analytics-platform)) | OCDAP |
+| | [CFCAP]([[https://aeg-cfcap.streamlit.app](https://github.com/adamelgbouri/commodity-forward-curve-analytics-platform)/](https://github.com/adamelgbouri/commodity-forward-curve-analytics-platform)) | OCDAP |
 |---|---|---|
 | **Purpose** | Forward curve analytics | Derivatives pricing |
 | **Models** | PCA, Schwartz-Smith 3-factor, convenience yield | Black-76, Kirk, Asian MC, Barrier MC |
