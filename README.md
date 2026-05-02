@@ -1,4 +1,4 @@
-# OCDAP — Options & Commodity Derivatives Analytics Platform
+# OCDAP — Options & Commodity Derivatives Analytics Platform ™ by AEG
 
 > Six industrial pricing engines. 65+ commodities. Live futures data.  
 > From vanilla Black-76 to barrier Monte Carlo — all in a single Python file.
@@ -7,6 +7,9 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-red?style=flat-square)
 ![Numpy](https://img.shields.io/badge/NumPy-Monte%20Carlo-orange?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+![demo](docs/OCDAP_1.gif)
+![demo](docs/OCDAP_2.gif)
 
 ---
 
@@ -20,12 +23,7 @@ Every pricer is connected to the same forward curve, ensuring consistency across
 
 ## Live Demo
 
-```bash
-git clone https://github.com/your-repo/ocdap
-pip install -r requirements.txt
-streamlit run ocdap.py
-```
-
+**[aeg-cfcap.streamlit.app](https://aeg-cfcap.streamlit.app/)**
 ---
 
 ## Pricing Engines
@@ -95,7 +93,7 @@ $$\text{NPV} = \sum_{i=1}^{N}e^{-rT_i}(F_i - K)\cdot\text{notional}, \qquad K^* 
 
 $$C_\text{KO} = e^{-rT}\,\mathbb{E}\!\left[\max(S_T-K,\,0)\cdot\mathbf{1}_{\left\{\min_{0\le t\le T}S_t > B\right\}}\right]$$
 
-See [`docs/OCDAP_Technical_Report.pdf`](docs/OCDAP_Technical_Report.pdf) for the full mathematical write-up.
+See [`docs/Options_and_Commodity_Derivatives_Analytics_Platform.pdf`](docs/Options_and_Commodity_Derivatives_Analytics_Platform.pdf) for the full mathematical write-up.
 
 ---
 
@@ -122,7 +120,7 @@ pip install git+https://github.com/StreamAlpha/tvdatafeed.git  # optional
 
 OCDAP and CFCAP are complementary platforms designed to be used together:
 
-| | [CFCAP](https://aeg-cfcap.streamlit.app/) | OCDAP |
+| | [CFCAP]([https://aeg-cfcap.streamlit.app/](https://github.com/adamelgbouri/commodity-forward-curve-analytics-platform)) | OCDAP |
 |---|---|---|
 | **Purpose** | Forward curve analytics | Derivatives pricing |
 | **Models** | PCA, Schwartz-Smith 3-factor, convenience yield | Black-76, Kirk, Asian MC, Barrier MC |
