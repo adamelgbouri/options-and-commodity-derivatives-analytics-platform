@@ -26,7 +26,9 @@ Every pricer is connected to the same forward curve, ensuring consistency across
 ## Live Demo
 
 **[aeg-ocdap.streamlit.app](https://aeg-ocdap.streamlit.app/)**
+
 The app is live and free to use. No installation required.
+
 ---
 
 ## Pricing Engines
