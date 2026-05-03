@@ -1,9 +1,9 @@
-# OCDAP — Options & Commodity Derivatives Analytics Platform ™ by AEG
+# CODAP — Commodity Options & Derivatives Analytics Platform ™ by AEG
 
 > Six industrial pricing engines. 65+ commodities. Live futures data.  
 > From vanilla Black-76 to barrier Monte Carlo — all in a single Python file.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://aeg-ocdap.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://aeg-codap.streamlit.app/)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-red?style=flat-square)
@@ -15,9 +15,9 @@
 
 ---
 
-## What is OCDAP?
+## What is CODAP?
 
-OCDAP is a Python application that prices commodity derivatives on a **live forward curve** downloaded from Yahoo Finance or TradingView. It implements six pricing engines used daily by energy trading desks, covering vanilla options, Asian average-price options, crack spread options, calendar spread options, commodity swaps, and barrier options.
+CODAP is a Python application that prices commodity derivatives on a **live forward curve** downloaded from Yahoo Finance or TradingView. It implements six pricing engines used daily by energy trading desks, covering vanilla options, Asian average-price options, crack spread options, calendar spread options, commodity swaps, and barrier options.
 
 Every pricer is connected to the same forward curve, ensuring consistency across all products and maturities.
 
@@ -25,7 +25,7 @@ Every pricer is connected to the same forward curve, ensuring consistency across
 
 ## Live Demo
 
-**[aeg-ocdap.streamlit.app](https://aeg-ocdap.streamlit.app/)**
+**[aeg-codap.streamlit.app](https://aeg-codap.streamlit.app/)**
 
 The app is live and free to use. No installation required.
 
@@ -86,7 +86,7 @@ $$\sigma_\text{Kirk} = \sqrt{\sigma_1^2 + \left(\frac{F_2}{F_2+Ke^{-rT}}\right)^
 
 Accurate for $\rho > 0.70$, which always holds for crude vs refined products (typical $\rho \approx 0.85-0.95$).
 
-**Asian option** — arithmetic average has no closed form. OCDAP uses Monte Carlo with the Kemna-Vorst (1990) geometric price as a lower bound (AM-GM inequality guarantees arithmetic $\geq$ geometric):
+**Asian option** — arithmetic average has no closed form. CODAP uses Monte Carlo with the Kemna-Vorst (1990) geometric price as a lower bound (AM-GM inequality guarantees arithmetic $\geq$ geometric):
 
 $$C_\text{Asian} = e^{-rT}\cdot\frac{1}{M}\sum_{j=1}^{M}\max\!\left(\frac{1}{N}\sum_{i=1}^{N}S_{t_i}^{(j)}-K,\;0\right)$$
 
@@ -118,9 +118,9 @@ See [`docs/Options_and_Commodity_Derivatives_Analytics_Platform.pdf`](docs/Optio
 
 ## Relationship with CFCAP
 
-OCDAP and CFCAP are complementary platforms designed to be used together:
+CODAP and CFCAP are complementary platforms designed to be used together:
 
-| | [CFCAP]([[https://aeg-cfcap.streamlit.app](https://github.com/adamelgbouri/commodity-forward-curve-analytics-platform)/](https://github.com/adamelgbouri/commodity-forward-curve-analytics-platform)) | OCDAP |
+| | [CFCAP]([[https://aeg-cfcap.streamlit.app](https://github.com/adamelgbouri/commodity-forward-curve-analytics-platform)/](https://github.com/adamelgbouri/commodity-forward-curve-analytics-platform)) | CODAP |
 |---|---|---|
 | **Purpose** | Forward curve analytics | Derivatives pricing |
 | **Models** | PCA, Schwartz-Smith 3-factor, convenience yield | Black-76, Kirk, Asian MC, Barrier MC |
@@ -129,7 +129,7 @@ OCDAP and CFCAP are complementary platforms designed to be used together:
 | **Typical user** | Curve trader, risk manager | Options desk, structurer, margin hedger |
 
 CFCAP analyses the shape, structure and dynamics of the forward curve.  
-OCDAP takes that curve and prices the derivatives written on it.
+CODAP takes that curve and prices the derivatives written on it.
 
 ---
 
